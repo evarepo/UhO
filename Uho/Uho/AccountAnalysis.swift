@@ -12,7 +12,12 @@ class AccountAnalysis {
     
     
     
+    
     init(){
         
     }
+    
+    
+    
+    
 }

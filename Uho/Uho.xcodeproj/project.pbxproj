@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5913CA981CB29447009FB27D /* PostComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5913CA971CB29447009FB27D /* PostComments.swift */; };
+		5913CA9A1CB29F21009FB27D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5913CA991CB29F21009FB27D /* SettingsViewController.swift */; };
+		5913CA9C1CB29F4B009FB27D /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5913CA9B1CB29F4B009FB27D /* AppSettings.swift */; };
+		5913CA9E1CB2AA33009FB27D /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5913CA9D1CB2AA33009FB27D /* LaunchViewController.swift */; };
+		5913CAA01CB2AB84009FB27D /* SocialNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5913CA9F1CB2AB84009FB27D /* SocialNetworkController.swift */; };
 		596B44051CA7399B00E6F6A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596B44041CA7399B00E6F6A3 /* AppDelegate.swift */; };
 		596B44071CA7399B00E6F6A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596B44061CA7399B00E6F6A3 /* ViewController.swift */; };
 		596B440A1CA7399B00E6F6A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596B44081CA7399B00E6F6A3 /* Main.storyboard */; };
@@ -20,11 +25,19 @@
 		596B44261CA7860E00E6F6A3 /* PercentageFillCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596B44251CA7860E00E6F6A3 /* PercentageFillCircleView.swift */; };
 		596B44281CA7A6EF00E6F6A3 /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 596B44271CA7A6EF00E6F6A3 /* Gotham-Medium.otf */; };
 		596B442A1CA7B27400E6F6A3 /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 596B44291CA7B27400E6F6A3 /* Gotham-Light.otf */; };
+		599E3CC41CB28A8F004AB004 /* PostAnalysisDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599E3CC31CB28A8F004AB004 /* PostAnalysisDataSource.swift */; };
+		599E3CC61CB28F73004AB004 /* TableSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 599E3CC51CB28F73004AB004 /* TableSectionHeaderView.xib */; };
+		599E3CC81CB29031004AB004 /* TableSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599E3CC71CB29031004AB004 /* TableSectionHeaderView.swift */; };
 		59CCE8021CA8A7B900E22423 /* AccountAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCE8011CA8A7B900E22423 /* AccountAnalysis.swift */; };
 		59CCE8041CA8B92E00E22423 /* PostDetailAnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCE8031CA8B92E00E22423 /* PostDetailAnalysisController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5913CA971CB29447009FB27D /* PostComments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostComments.swift; sourceTree = "<group>"; };
+		5913CA991CB29F21009FB27D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5913CA9B1CB29F4B009FB27D /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		5913CA9D1CB2AA33009FB27D /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		5913CA9F1CB2AB84009FB27D /* SocialNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNetworkController.swift; sourceTree = "<group>"; };
 		596B44011CA7399B00E6F6A3 /* Uho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		596B44041CA7399B00E6F6A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		596B44061CA7399B00E6F6A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +54,9 @@
 		596B44251CA7860E00E6F6A3 /* PercentageFillCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentageFillCircleView.swift; sourceTree = "<group>"; };
 		596B44271CA7A6EF00E6F6A3 /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium.otf"; sourceTree = "<group>"; };
 		596B44291CA7B27400E6F6A3 /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
+		599E3CC31CB28A8F004AB004 /* PostAnalysisDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostAnalysisDataSource.swift; sourceTree = "<group>"; };
+		599E3CC51CB28F73004AB004 /* TableSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableSectionHeaderView.xib; sourceTree = "<group>"; };
+		599E3CC71CB29031004AB004 /* TableSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionHeaderView.swift; sourceTree = "<group>"; };
 		59CCE8011CA8A7B900E22423 /* AccountAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountAnalysis.swift; sourceTree = "<group>"; };
 		59CCE8031CA8B92E00E22423 /* PostDetailAnalysisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailAnalysisController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +73,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5913CA941CB29409009FB27D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				599E3CC51CB28F73004AB004 /* TableSectionHeaderView.xib */,
+				599E3CC71CB29031004AB004 /* TableSectionHeaderView.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		5913CA951CB29418009FB27D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59CCE8011CA8A7B900E22423 /* AccountAnalysis.swift */,
+				5913CA961CB29421009FB27D /* PostAnalysis */,
+				5913CA9B1CB29F4B009FB27D /* AppSettings.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5913CA961CB29421009FB27D /* PostAnalysis */ = {
+			isa = PBXGroup;
+			children = (
+				599E3CC31CB28A8F004AB004 /* PostAnalysisDataSource.swift */,
+				5913CA971CB29447009FB27D /* PostComments.swift */,
+			);
+			name = PostAnalysis;
+			sourceTree = "<group>";
+		};
 		596B43F81CA7399B00E6F6A3 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +121,8 @@
 		596B44031CA7399B00E6F6A3 /* Uho */ = {
 			isa = PBXGroup;
 			children = (
+				5913CA951CB29418009FB27D /* Model */,
+				5913CA941CB29409009FB27D /* Cells */,
 				596B44201CA77F3900E6F6A3 /* PieChart */,
 				596B44181CA7424500E6F6A3 /* Gotham-Bold.otf */,
 				596B44291CA7B27400E6F6A3 /* Gotham-Light.otf */,
@@ -90,8 +136,10 @@
 				596B440D1CA7399B00E6F6A3 /* LaunchScreen.storyboard */,
 				596B44101CA7399B00E6F6A3 /* Info.plist */,
 				596B44251CA7860E00E6F6A3 /* PercentageFillCircleView.swift */,
-				59CCE8011CA8A7B900E22423 /* AccountAnalysis.swift */,
 				59CCE8031CA8B92E00E22423 /* PostDetailAnalysisController.swift */,
+				5913CA991CB29F21009FB27D /* SettingsViewController.swift */,
+				5913CA9D1CB2AA33009FB27D /* LaunchViewController.swift */,
+				5913CA9F1CB2AB84009FB27D /* SocialNetworkController.swift */,
 			);
 			path = Uho;
 			sourceTree = "<group>";
@@ -167,6 +215,7 @@
 				596B441A1CA7424500E6F6A3 /* Gotham-Bold.otf in Resources */,
 				596B440F1CA7399B00E6F6A3 /* LaunchScreen.storyboard in Resources */,
 				596B44281CA7A6EF00E6F6A3 /* Gotham-Medium.otf in Resources */,
+				599E3CC61CB28F73004AB004 /* TableSectionHeaderView.xib in Resources */,
 				596B442A1CA7B27400E6F6A3 /* Gotham-Light.otf in Resources */,
 				596B44171CA73F3300E6F6A3 /* Gotham-Black.otf in Resources */,
 				596B440C1CA7399B00E6F6A3 /* Assets.xcassets in Resources */,
@@ -181,11 +230,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				599E3CC81CB29031004AB004 /* TableSectionHeaderView.swift in Sources */,
 				596B44231CA77F3900E6F6A3 /* XYPieChart.m in Sources */,
+				599E3CC41CB28A8F004AB004 /* PostAnalysisDataSource.swift in Sources */,
+				5913CA9A1CB29F21009FB27D /* SettingsViewController.swift in Sources */,
 				59CCE8021CA8A7B900E22423 /* AccountAnalysis.swift in Sources */,
+				5913CAA01CB2AB84009FB27D /* SocialNetworkController.swift in Sources */,
 				59CCE8041CA8B92E00E22423 /* PostDetailAnalysisController.swift in Sources */,
 				596B44071CA7399B00E6F6A3 /* ViewController.swift in Sources */,
+				5913CA9E1CB2AA33009FB27D /* LaunchViewController.swift in Sources */,
+				5913CA9C1CB29F4B009FB27D /* AppSettings.swift in Sources */,
 				596B44051CA7399B00E6F6A3 /* AppDelegate.swift in Sources */,
+				5913CA981CB29447009FB27D /* PostComments.swift in Sources */,
 				596B44261CA7860E00E6F6A3 /* PercentageFillCircleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

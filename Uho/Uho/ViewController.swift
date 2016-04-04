@@ -36,6 +36,12 @@ class ViewController: UIViewController, XYPieChartDataSource {
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBarHidden = false
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         refreshScreen()
@@ -64,11 +70,17 @@ class ViewController: UIViewController, XYPieChartDataSource {
     }
     
     func setupScreen(){
+        
+        let fontColor = UIColor(red: 48.0/255.0, green: 53.0/255.0, blue: 136.0/255.0, alpha: 1.0)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Gotham-Bold", size: 21)!, NSForegroundColorAttributeName : fontColor]
+        
+        self.title = "Uh O!"
+        
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Gotham-Bold", size: 21)!]
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back_button"), style: .Plain, target: nil, action: nil)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back_button"), style: .Plain, target: self, action: #selector(ViewController.goBack(_:)))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 48.0/255.0, green: 53.0/255.0, blue: 126.0/255.0, alpha: 1.0)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu_icon"), style: .Plain, target: nil, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu_icon"), style: .Plain, target: self, action: #selector(ViewController.showSettings(_:)))
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 48.0/255.0, green: 53.0/255.0, blue: 126.0/255.0, alpha: 1.0)
     }
     
@@ -77,6 +89,17 @@ class ViewController: UIViewController, XYPieChartDataSource {
         self.commentFillView?.percentage = 0.3
         self.picturesFillView?.percentage = 0.5
         self.videoFillView?.percentage = 0.7
+    }
+    
+    func showSettings(sender : AnyObject ){
+        
+        let settingsController = self.storyboard?.instantiateViewControllerWithIdentifier("settings_controller") as! SettingsViewController
+        self.navigationController?.pushViewController(settingsController, animated: true)
+        
+    }
+    
+    func goBack(sender : AnyObject ){
+        self.navigationController?.popViewControllerAnimated(true)
     }
 
 }
