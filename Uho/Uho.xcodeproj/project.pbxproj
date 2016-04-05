@@ -14,9 +14,6 @@
 		5913CAA01CB2AB84009FB27D /* SocialNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5913CA9F1CB2AB84009FB27D /* SocialNetworkController.swift */; };
 		594280431CB365C100B24A52 /* PostReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594280421CB365C100B24A52 /* PostReport.swift */; };
 		594280471CB365FD00B24A52 /* Alamofire.framework in Embedded Frameworks */ = {isa = PBXBuildFile; fileRef = 594280441CB365DA00B24A52 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5942804C1CB3670F00B24A52 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594280491CB3670F00B24A52 /* FBSDKCoreKit.framework */; };
-		5942804D1CB3670F00B24A52 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5942804A1CB3670F00B24A52 /* FBSDKLoginKit.framework */; };
-		5942804E1CB3670F00B24A52 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5942804B1CB3670F00B24A52 /* FBSDKShareKit.framework */; };
 		594280511CB36B4300B24A52 /* UhoServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594280501CB36B4300B24A52 /* UhoServer.swift */; };
 		594280531CB36C9100B24A52 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594280521CB36C9100B24A52 /* User.swift */; };
 		594280561CB376BA00B24A52 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594280551CB376BA00B24A52 /* PushNotificationService.swift */; };
@@ -33,6 +30,9 @@
 		596B44261CA7860E00E6F6A3 /* PercentageFillCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596B44251CA7860E00E6F6A3 /* PercentageFillCircleView.swift */; };
 		596B44281CA7A6EF00E6F6A3 /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 596B44271CA7A6EF00E6F6A3 /* Gotham-Medium.otf */; };
 		596B442A1CA7B27400E6F6A3 /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 596B44291CA7B27400E6F6A3 /* Gotham-Light.otf */; };
+		597C11791CB37DE9003CF803 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 597C11761CB37DE9003CF803 /* FBSDKCoreKit.framework */; };
+		597C117A1CB37DE9003CF803 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 597C11771CB37DE9003CF803 /* FBSDKLoginKit.framework */; };
+		597C117B1CB37DE9003CF803 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 597C11781CB37DE9003CF803 /* FBSDKShareKit.framework */; };
 		599E3CC41CB28A8F004AB004 /* PostAnalysisDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599E3CC31CB28A8F004AB004 /* PostAnalysisDataSource.swift */; };
 		599E3CC61CB28F73004AB004 /* TableSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 599E3CC51CB28F73004AB004 /* TableSectionHeaderView.xib */; };
 		599E3CC81CB29031004AB004 /* TableSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599E3CC71CB29031004AB004 /* TableSectionHeaderView.swift */; };
@@ -84,6 +84,9 @@
 		596B44251CA7860E00E6F6A3 /* PercentageFillCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentageFillCircleView.swift; sourceTree = "<group>"; };
 		596B44271CA7A6EF00E6F6A3 /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium.otf"; sourceTree = "<group>"; };
 		596B44291CA7B27400E6F6A3 /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
+		597C11761CB37DE9003CF803 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		597C11771CB37DE9003CF803 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		597C11781CB37DE9003CF803 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		599E3CC31CB28A8F004AB004 /* PostAnalysisDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostAnalysisDataSource.swift; sourceTree = "<group>"; };
 		599E3CC51CB28F73004AB004 /* TableSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableSectionHeaderView.xib; sourceTree = "<group>"; };
 		599E3CC71CB29031004AB004 /* TableSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionHeaderView.swift; sourceTree = "<group>"; };
@@ -96,10 +99,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5942804E1CB3670F00B24A52 /* FBSDKShareKit.framework in Frameworks */,
+				597C117B1CB37DE9003CF803 /* FBSDKShareKit.framework in Frameworks */,
 				596B441F1CA7582B00E6F6A3 /* QuartzCore.framework in Frameworks */,
-				5942804C1CB3670F00B24A52 /* FBSDKCoreKit.framework in Frameworks */,
-				5942804D1CB3670F00B24A52 /* FBSDKLoginKit.framework in Frameworks */,
+				597C11791CB37DE9003CF803 /* FBSDKCoreKit.framework in Frameworks */,
+				597C117A1CB37DE9003CF803 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +168,9 @@
 		596B43F81CA7399B00E6F6A3 = {
 			isa = PBXGroup;
 			children = (
+				597C11761CB37DE9003CF803 /* FBSDKCoreKit.framework */,
+				597C11771CB37DE9003CF803 /* FBSDKLoginKit.framework */,
+				597C11781CB37DE9003CF803 /* FBSDKShareKit.framework */,
 				594280441CB365DA00B24A52 /* Alamofire.framework */,
 				596B441E1CA7582B00E6F6A3 /* QuartzCore.framework */,
 				596B44031CA7399B00E6F6A3 /* Uho */,
@@ -434,7 +440,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"~/Documents/FacebookSDK/",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Uho/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -454,7 +460,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"~/Documents/FacebookSDK/",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Uho/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
