@@ -7,13 +7,19 @@
 //
 
 import Foundation
+import UIKit
+
+import FBSDKLoginKit
 
 class SocialNetworkController : UIViewController{
     
+    @IBOutlet weak var fbLoginButton : FBSDKLoginButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("SDK version \(FBSDKSettings .sdkVersion())")
+
         
     }
     
@@ -25,6 +31,34 @@ class SocialNetworkController : UIViewController{
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
+    }
+    
+    @IBAction func facebookTap(sender : AnyObject? ){
+        
+        let login = FBSDKLoginManager()
+        
+        login.logInWithReadPermissions(["public_profile"], fromViewController: self) { (loginResult : FBSDKLoginManagerLoginResult!, error : NSError!) in
+            
+            if error != nil {
+                
+            }
+            else if loginResult.isCancelled {
+                
+            }
+            else{
+                
+                var user = User()
+                
+                user.fbToken = loginResult.token.tokenString
+                
+                UhoServer.createUser(user, completionHandler: { (user, error) in
+                    print("Login Success")
+                })
+                
+                
+            }
+        }
+        
     }
 
     

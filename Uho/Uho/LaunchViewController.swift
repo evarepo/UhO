@@ -28,4 +28,8 @@ class LaunchViewController : UIViewController {
         return .LightContent
     }
     
+    @IBAction func startTap(sender : AnyObject ){
+        NSNotificationCenter.defaultCenter().postNotificationName(AskPushNotificationKey, object: nil)
+    }
+    
 }

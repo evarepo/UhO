@@ -68,6 +68,8 @@ class PercentageFillCircleView : UIView {
         let finalPosition = ceil(lowPosition - ( self.percentage * (self.bounds.size.height)))
         fillRect.origin.y = CGFloat(finalPosition)
         circleFillLayer.frame = fillRect
+        
+        self.percentageTitle?.text = String(format: "%d", Int(self.percentage * 100))
     }
     
     

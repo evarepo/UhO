@@ -12,6 +12,14 @@
 		5913CA9C1CB29F4B009FB27D /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5913CA9B1CB29F4B009FB27D /* AppSettings.swift */; };
 		5913CA9E1CB2AA33009FB27D /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5913CA9D1CB2AA33009FB27D /* LaunchViewController.swift */; };
 		5913CAA01CB2AB84009FB27D /* SocialNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5913CA9F1CB2AB84009FB27D /* SocialNetworkController.swift */; };
+		594280431CB365C100B24A52 /* PostReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594280421CB365C100B24A52 /* PostReport.swift */; };
+		594280471CB365FD00B24A52 /* Alamofire.framework in Embedded Frameworks */ = {isa = PBXBuildFile; fileRef = 594280441CB365DA00B24A52 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5942804C1CB3670F00B24A52 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 594280491CB3670F00B24A52 /* FBSDKCoreKit.framework */; };
+		5942804D1CB3670F00B24A52 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5942804A1CB3670F00B24A52 /* FBSDKLoginKit.framework */; };
+		5942804E1CB3670F00B24A52 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5942804B1CB3670F00B24A52 /* FBSDKShareKit.framework */; };
+		594280511CB36B4300B24A52 /* UhoServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594280501CB36B4300B24A52 /* UhoServer.swift */; };
+		594280531CB36C9100B24A52 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594280521CB36C9100B24A52 /* User.swift */; };
+		594280561CB376BA00B24A52 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594280551CB376BA00B24A52 /* PushNotificationService.swift */; };
 		596B44051CA7399B00E6F6A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596B44041CA7399B00E6F6A3 /* AppDelegate.swift */; };
 		596B44071CA7399B00E6F6A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596B44061CA7399B00E6F6A3 /* ViewController.swift */; };
 		596B440A1CA7399B00E6F6A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596B44081CA7399B00E6F6A3 /* Main.storyboard */; };
@@ -32,12 +40,34 @@
 		59CCE8041CA8B92E00E22423 /* PostDetailAnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCE8031CA8B92E00E22423 /* PostDetailAnalysisController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		594280461CB365E700B24A52 /* Embedded Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				594280471CB365FD00B24A52 /* Alamofire.framework in Embedded Frameworks */,
+			);
+			name = "Embedded Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5913CA971CB29447009FB27D /* PostComments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostComments.swift; sourceTree = "<group>"; };
 		5913CA991CB29F21009FB27D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5913CA9B1CB29F4B009FB27D /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		5913CA9D1CB2AA33009FB27D /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		5913CA9F1CB2AB84009FB27D /* SocialNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNetworkController.swift; sourceTree = "<group>"; };
+		594280421CB365C100B24A52 /* PostReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostReport.swift; sourceTree = "<group>"; };
+		594280441CB365DA00B24A52 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		594280491CB3670F00B24A52 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		5942804A1CB3670F00B24A52 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		5942804B1CB3670F00B24A52 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		594280501CB36B4300B24A52 /* UhoServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UhoServer.swift; sourceTree = "<group>"; };
+		594280521CB36C9100B24A52 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		594280551CB376BA00B24A52 /* PushNotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
 		596B44011CA7399B00E6F6A3 /* Uho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		596B44041CA7399B00E6F6A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		596B44061CA7399B00E6F6A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +96,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5942804E1CB3670F00B24A52 /* FBSDKShareKit.framework in Frameworks */,
 				596B441F1CA7582B00E6F6A3 /* QuartzCore.framework in Frameworks */,
+				5942804C1CB3670F00B24A52 /* FBSDKCoreKit.framework in Frameworks */,
+				5942804D1CB3670F00B24A52 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +121,7 @@
 				59CCE8011CA8A7B900E22423 /* AccountAnalysis.swift */,
 				5913CA961CB29421009FB27D /* PostAnalysis */,
 				5913CA9B1CB29F4B009FB27D /* AppSettings.swift */,
+				594280521CB36C9100B24A52 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -95,15 +129,43 @@
 		5913CA961CB29421009FB27D /* PostAnalysis */ = {
 			isa = PBXGroup;
 			children = (
+				594280421CB365C100B24A52 /* PostReport.swift */,
 				599E3CC31CB28A8F004AB004 /* PostAnalysisDataSource.swift */,
 				5913CA971CB29447009FB27D /* PostComments.swift */,
 			);
 			name = PostAnalysis;
 			sourceTree = "<group>";
 		};
+		594280481CB366F900B24A52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				594280491CB3670F00B24A52 /* FBSDKCoreKit.framework */,
+				5942804A1CB3670F00B24A52 /* FBSDKLoginKit.framework */,
+				5942804B1CB3670F00B24A52 /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5942804F1CB36B2F00B24A52 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				594280501CB36B4300B24A52 /* UhoServer.swift */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
+		594280541CB376A800B24A52 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				594280551CB376BA00B24A52 /* PushNotificationService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		596B43F81CA7399B00E6F6A3 = {
 			isa = PBXGroup;
 			children = (
+				594280441CB365DA00B24A52 /* Alamofire.framework */,
 				596B441E1CA7582B00E6F6A3 /* QuartzCore.framework */,
 				596B44031CA7399B00E6F6A3 /* Uho */,
 				596B44021CA7399B00E6F6A3 /* Products */,
@@ -121,6 +183,9 @@
 		596B44031CA7399B00E6F6A3 /* Uho */ = {
 			isa = PBXGroup;
 			children = (
+				594280541CB376A800B24A52 /* Service */,
+				5942804F1CB36B2F00B24A52 /* Server */,
+				594280481CB366F900B24A52 /* Frameworks */,
 				5913CA951CB29418009FB27D /* Model */,
 				5913CA941CB29409009FB27D /* Cells */,
 				596B44201CA77F3900E6F6A3 /* PieChart */,
@@ -160,6 +225,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 596B44131CA7399B00E6F6A3 /* Build configuration list for PBXNativeTarget "Uho" */;
 			buildPhases = (
+				594280461CB365E700B24A52 /* Embedded Frameworks */,
 				596B43FD1CA7399B00E6F6A3 /* Sources */,
 				596B43FE1CA7399B00E6F6A3 /* Frameworks */,
 				596B43FF1CA7399B00E6F6A3 /* Resources */,
@@ -185,6 +251,12 @@
 				TargetAttributes = {
 					596B44001CA7399B00E6F6A3 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = EY8X4TAYVH;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -234,13 +306,17 @@
 				596B44231CA77F3900E6F6A3 /* XYPieChart.m in Sources */,
 				599E3CC41CB28A8F004AB004 /* PostAnalysisDataSource.swift in Sources */,
 				5913CA9A1CB29F21009FB27D /* SettingsViewController.swift in Sources */,
+				594280531CB36C9100B24A52 /* User.swift in Sources */,
 				59CCE8021CA8A7B900E22423 /* AccountAnalysis.swift in Sources */,
 				5913CAA01CB2AB84009FB27D /* SocialNetworkController.swift in Sources */,
 				59CCE8041CA8B92E00E22423 /* PostDetailAnalysisController.swift in Sources */,
 				596B44071CA7399B00E6F6A3 /* ViewController.swift in Sources */,
+				594280561CB376BA00B24A52 /* PushNotificationService.swift in Sources */,
+				594280511CB36B4300B24A52 /* UhoServer.swift in Sources */,
 				5913CA9E1CB2AA33009FB27D /* LaunchViewController.swift in Sources */,
 				5913CA9C1CB29F4B009FB27D /* AppSettings.swift in Sources */,
 				596B44051CA7399B00E6F6A3 /* AppDelegate.swift in Sources */,
+				594280431CB365C100B24A52 /* PostReport.swift in Sources */,
 				5913CA981CB29447009FB27D /* PostComments.swift in Sources */,
 				596B44261CA7860E00E6F6A3 /* PercentageFillCircleView.swift in Sources */,
 			);
@@ -353,10 +429,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"~/Documents/FacebookSDK/",
+				);
 				INFOPLIST_FILE = Uho/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.feathertouch.Uho;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sridhar.uho;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Uho-Bridging-Header.h";
 			};
 			name = Debug;
@@ -365,10 +449,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"~/Documents/FacebookSDK/",
+				);
 				INFOPLIST_FILE = Uho/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.feathertouch.Uho;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sridhar.uho;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Uho-Bridging-Header.h";
 			};
 			name = Release;

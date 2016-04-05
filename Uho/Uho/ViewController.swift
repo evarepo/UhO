@@ -13,6 +13,8 @@ class ViewController: UIViewController, XYPieChartDataSource {
     let values:Array<CGFloat> = [22.0,18.0,35.0,25.0];
     var colors:Array<UIColor> = Array();
     
+    var postReport = PostReport()
+    
     @IBOutlet var piechart : XYPieChart?
     @IBOutlet var commentFillView : PercentageFillCircleView?
     @IBOutlet var picturesFillView : PercentageFillCircleView?
@@ -59,11 +61,11 @@ class ViewController: UIViewController, XYPieChartDataSource {
     //- (CGFloat)pieChart:(XYPieChart *)pieChart valueForSliceAtIndex:(NSUInteger)index;
     
     func numberOfSlicesInPieChart(pieChart: XYPieChart!) -> UInt {
-       return UInt(values.count)
+       return postReport.totalComponentsInPerceivedAsField()
     }
     
     func pieChart(pieChart: XYPieChart!, valueForSliceAtIndex index: UInt) -> CGFloat {
-        return values[Int(index)];
+        return postReport.valueOfComponentAsPerceivedAsField(Int(index));
     }
     func pieChart(pieChart: XYPieChart!, colorForSliceAtIndex index: UInt) -> UIColor! {
         return colors[Int(index%4)]
@@ -86,9 +88,9 @@ class ViewController: UIViewController, XYPieChartDataSource {
     
     func refreshScreen(){
         piechart?.reloadData()
-        self.commentFillView?.percentage = 0.3
-        self.picturesFillView?.percentage = 0.5
-        self.videoFillView?.percentage = 0.7
+        self.commentFillView?.percentage = postReport.negativePerceptionFromComments
+        self.picturesFillView?.percentage = postReport.negativePerceptionFromPhotos
+        self.videoFillView?.percentage = postReport.negativePerceptionFromVideos
     }
     
     func showSettings(sender : AnyObject ){
