@@ -41,6 +41,7 @@ class PushNotificationService {
         
         let tokenString = convertDeviceTokenToString(token)
         print(tokenString)
+        //throw notification
     }
     
     private func convertDeviceTokenToString(deviceToken:NSData) -> String {

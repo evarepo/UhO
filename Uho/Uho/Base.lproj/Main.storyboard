@@ -78,7 +78,7 @@
         <!--Uh O!-->
         <scene sceneID="J0n-UC-cz7">
             <objects>
-                <viewController id="4wh-K9-SUV" customClass="ViewController" customModule="Uho" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="user_main_analysis_scren" id="4wh-K9-SUV" customClass="ViewController" customModule="Uho" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wFj-gY-zSB"/>
                         <viewControllerLayoutGuide type="bottom" id="6Iz-hb-l9h"/>

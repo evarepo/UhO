@@ -11,7 +11,7 @@ import Foundation
 class PostComments : NSObject , UITableViewDataSource {
     
     var postComments = [
-        "Sridhar: this is a big text that should reach atleast double lines",
+        "Sridhar: this is a big text that should reach atleast double lines \n another line",
         "Harshal : Single Line Comment"
     ]
     

@@ -35,29 +35,37 @@ class SocialNetworkController : UIViewController{
     
     @IBAction func facebookTap(sender : AnyObject? ){
         
-        let login = FBSDKLoginManager()
+        let userAnalysisController = self.storyboard?.instantiateViewControllerWithIdentifier("user_main_analysis_scren") as! ViewController
+        self.navigationController?.pushViewController(userAnalysisController, animated: true)
+
         
-        login.logInWithReadPermissions(["public_profile"], fromViewController: self) { (loginResult : FBSDKLoginManagerLoginResult!, error : NSError!) in
-            
-            if error != nil {
-                
-            }
-            else if loginResult.isCancelled {
-                
-            }
-            else{
-                
-                var user = User()
-                
-                user.fbToken = loginResult.token.tokenString
-                
-                UhoServer.createUser(user, completionHandler: { (user, error) in
-                    print("Login Success")
-                })
-                
-                
-            }
-        }
+        
+//        let login = FBSDKLoginManager()
+//        
+//        login.logInWithReadPermissions(["public_profile"], fromViewController: self) { (loginResult : FBSDKLoginManagerLoginResult!, error : NSError!) in
+//            
+//            if error != nil {
+//                
+//            }
+//            else if loginResult.isCancelled {
+//                
+//            }
+//            else{
+//                
+//            
+//                
+////                var user = User()
+////                
+////                //Test code to push token to the server..
+////                user.fbToken = loginResult.token.tokenString
+////                
+////                UhoServer.createUser(user, completionHandler: { (user, error) in
+////                    print("Login Success")
+////                })
+//                
+//                
+//            }
+//        }
         
     }
 

@@ -13,6 +13,7 @@ class User {
     
     var fbToken = ""
     var userId = ""
+
     var postReport: PostReport? = nil
     var pushToken = ""
     
