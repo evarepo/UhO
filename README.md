@@ -6,8 +6,8 @@ Uh O! app, backend and mobile app
 ## creating user
 Create user when you first get the facebook token. You will receive a response with a user id in the result field as shown below. You can query full user record with that at any time. Store the user id on the app\client.
 url: http://52.91.235.124:8090/user
-verb: POST
-payload json:
+<br>verb: POST
+<br>payload json:
 
 ```json
 {
