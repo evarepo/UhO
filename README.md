@@ -29,8 +29,8 @@ response json:
 query user details on a REST GET call as shown below.
 
 url: http://52.91.235.124:8090/user?id=570568d5df5f08269161018d
-verb: GET
-response json: 
+<br>verb: GET
+<br>response json: 
 ```json
 {
   "code": 200,
@@ -79,9 +79,9 @@ use this API if you ever need to refresh any user details, such as, fb token or 
 * remember that the structure is replaced as-is on the server side. if information is missed then it will go missing on the server side also.
  
 Example:
-url: http://52.91.235.124:8090/user
-verb: POST
-payload json:
+<br>url: http://52.91.235.124:8090/user
+<br>verb: POST
+<br>payload json:
 
 ```json
 {
