@@ -102,6 +102,8 @@ Example:
 ##this post is ok
 When the user clikcs on the button to say that a post is ok as it is, then we mark it on the server side to be excluded for further analysis or alerts.
 
+http://<base url>/user/thispostisok/{userId}/{postId}/
+
 <br>Example:
 http://localhost:8080/user/thispostisok/570567913d1d401e4cc4210e/10153176378196628_10153858295591628/
 
