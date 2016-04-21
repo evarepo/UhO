@@ -38,9 +38,18 @@ class PushNotificationService {
     }
     
     func didRegisterToDeviceToken( token : NSData! ){
-        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let tokenString = convertDeviceTokenToString(token)
+        appDelegate.deviceToken = tokenString
         print(tokenString)
+        
+        // save device token string
+        ///////////////////////////////////////////////////////
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(tokenString, forKey: "deviceToken")
+        userDefaults.synchronize()
+        ///////////////////////////////////////////////////////
+        
         //throw notification
     }
     

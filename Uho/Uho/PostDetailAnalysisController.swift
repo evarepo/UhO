@@ -10,10 +10,16 @@ import Foundation
 
 class PostDetailAnalysisController : UIViewController, UITableViewDelegate {
     
+    var pageIndex : Int = 0
+    
     @IBOutlet weak var postImageView : UIImageView?
     @IBOutlet weak var analysisTableView : UITableView?
     @IBOutlet weak var commentsTableView : UITableView?
     
+    
+    var postServerData:NSDictionary?
+    //var postCommentsData:[String:Array<String>]?
+    //var imageUrl: String?
     
     let postAnalysisContent = PostAnalysisDataSource()
     let postComments = PostComments()
@@ -45,6 +51,27 @@ class PostDetailAnalysisController : UIViewController, UITableViewDelegate {
         
         self.commentsTableView?.backgroundColor = self.view.backgroundColor
         self.commentsTableView?.backgroundColor = UIColor.clearColor()
+        
+        // configur server response in model
+        //////////////////////////////////////////////////////////////////////
+        let pictureCommentList:NSString = postServerData!.objectForKey("picComment") as! NSString
+        
+        var analysis:[String:Array<String>] = [
+            "Picture" : [pictureCommentList as String]
+        ]
+        
+        
+        let postCommentList:NSString = postServerData!.objectForKey("postMsgComment") as! NSString
+        
+        let postComment:Array = [postCommentList as String]
+        
+        postAnalysisContent.analysis = analysis;
+        postComments.postComments = postComment;
+        
+        if let checkedUrl = NSURL(string: postServerData!.objectForKey("picURL") as! String) {
+            downloadImage(checkedUrl)
+        }
+        //////////////////////////////////////////////////////////////////////
         
     }
     
@@ -81,6 +108,32 @@ class PostDetailAnalysisController : UIViewController, UITableViewDelegate {
     
     func goBack(sender : AnyObject ){
         self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+            completion(data: data, response: response, error: error)
+            }.resume()
+    }
+    
+    func downloadImage(url: NSURL){
+        print("Download Started")
+        print("lastPathComponent: " + (url.lastPathComponent ?? ""))
+        getDataFromUrl(url) { (data, response, error)  in
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                guard let data = data where error == nil else { return }
+                print(response?.suggestedFilename ?? "")
+                print("Download Finished")
+                self.postImageView!.image = UIImage(data: data)
+            }
+        }
+    }
+    
+    @IBAction func editPostTap(sender : AnyObject? ){
+        
+        let schemeUrl: String = String(format:"fb://post/%@",postServerData!.objectForKey("postId") as! String)
+        UIApplication.sharedApplication().openURL(NSURL(string: schemeUrl)!)
+        
     }
     
     

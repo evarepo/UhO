@@ -17,12 +17,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var pushNotificationService = PushNotificationService()
-
+    var deviceToken = ""
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         
         // Override point for customization after application launch.
+        var userDefaults = NSUserDefaults.standardUserDefaults()
+        let appFirstLaunchStatus = userDefaults.valueForKey("appFirstLaunchStatus");
+        let socialNetworkLoginStatus = userDefaults.valueForKey("socialNetworkLoginStatus");
+        
+        if ( appFirstLaunchStatus != nil ){
+            let navigationController = window?.rootViewController as! UINavigationController
+            
+            if(socialNetworkLoginStatus != nil ){
+                
+                userDefaults = NSUserDefaults.standardUserDefaults()
+                let userId = userDefaults.valueForKey("userId") as! String
+                
+                let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let userAnalysisController : ViewController = storyboard.instantiateViewControllerWithIdentifier("user_main_analysis_scren") as! ViewController
+                
+                userAnalysisController.userId = userId
+                userAnalysisController.isNavigationRootScreen = true;
+                navigationController.viewControllers[0] = userAnalysisController;
+                
+            }else{
+                
+                let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let socialNetworkController : SocialNetworkController = storyboard.instantiateViewControllerWithIdentifier("SocialNetworkController") as! SocialNetworkController
+                
+                navigationController.viewControllers[0] = socialNetworkController;
+                
+            }
+        }
+        
         return true
     }
     

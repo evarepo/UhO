@@ -30,6 +30,13 @@ class LaunchViewController : UIViewController {
     
     @IBAction func startTap(sender : AnyObject ){
         NSNotificationCenter.defaultCenter().postNotificationName(AskPushNotificationKey, object: nil)
+        
+        // save first launch status
+        ///////////////////////////////////////////////////////
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject("1", forKey: "appFirstLaunchStatus")
+        userDefaults.synchronize()
+        ///////////////////////////////////////////////////////
     }
     
 }

@@ -16,8 +16,7 @@ class User {
 
     var postReport: PostReport? = nil
     var pushToken = ""
-    
-    
+//    var settings:UserSettings;
     func dictionaryRepresentation() -> Dictionary<String,AnyObject>? {
         
         var dictRep = Dictionary<String,AnyObject>()
@@ -26,5 +25,8 @@ class User {
         return dictRep
         
     }
-    
+//    
+//    init(data : NSDictionary) {
+//        self.settings = UserSettings(data: data.valueForKey("settings") as! NSDictionary)
+//    }
 }

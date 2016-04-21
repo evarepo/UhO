@@ -34,40 +34,75 @@ class SocialNetworkController : UIViewController{
     }
     
     @IBAction func facebookTap(sender : AnyObject? ){
-        
-        let userAnalysisController = self.storyboard?.instantiateViewControllerWithIdentifier("user_main_analysis_scren") as! ViewController
-        self.navigationController?.pushViewController(userAnalysisController, animated: true)
+        if ((FBSDKAccessToken.currentAccessToken()) != nil){
+            // Token is already available.
+            let userDefaults = NSUserDefaults.standardUserDefaults()
+            let deviceTokenString = userDefaults.valueForKey("deviceToken")
+            
+            let user = User()
+            user.fbToken = FBSDKAccessToken.currentAccessToken().tokenString
+            
+            if(deviceTokenString != nil){
+                user.pushToken = deviceTokenString as! String;
+            }else{
+                user.pushToken = "abcndjd"
+            }
+            
+            UhoServer.createUser(user, completionHandler: { (user, error) in
+                print("Login Success")
+                self.navigateUserToAnalysisViewOnSuccess(user.userId)
+            })
 
-        
-        
-//        let login = FBSDKLoginManager()
-//        
-//        login.logInWithReadPermissions(["public_profile"], fromViewController: self) { (loginResult : FBSDKLoginManagerLoginResult!, error : NSError!) in
-//            
-//            if error != nil {
-//                
-//            }
-//            else if loginResult.isCancelled {
-//                
-//            }
-//            else{
-//                
-//            
-//                
-////                var user = User()
-////                
-////                //Test code to push token to the server..
-////                user.fbToken = loginResult.token.tokenString
-////                
-////                UhoServer.createUser(user, completionHandler: { (user, error) in
-////                    print("Login Success")
-////                })
-//                
-//                
-//            }
-//        }
-        
+        }else{
+            // Token is not available
+            let login = FBSDKLoginManager()
+            login.logInWithReadPermissions(["public_profile"], fromViewController: self) { (loginResult : FBSDKLoginManagerLoginResult!, error : NSError!) in
+                
+                if error != nil {
+                    print(error)
+                }
+                else if loginResult.isCancelled {
+                    
+                }
+                else{
+                    
+                    print(loginResult.token.tokenString)
+                    
+                    let userDefaults = NSUserDefaults.standardUserDefaults()
+                    let deviceTokenString = userDefaults.valueForKey("deviceToken")
+                    
+                    let user = User()
+                    //Test code to push token to the server..
+                    user.fbToken = loginResult.token.tokenString
+                    
+                    if(deviceTokenString != nil){
+                        user.pushToken = deviceTokenString as! String;
+                    }else{
+                        user.pushToken = "abcndjd"
+                    }
+                    
+                    UhoServer.createUser(user, completionHandler: { (user, error) in
+                        print("Login Success")
+                        self.navigateUserToAnalysisViewOnSuccess(user.userId)
+                    })
+                }
+            }
+        }
     }
-
+    
+    func navigateUserToAnalysisViewOnSuccess(userId:String){
+        let userAnalysisController = self.storyboard?.instantiateViewControllerWithIdentifier("user_main_analysis_scren") as! ViewController
+        userAnalysisController.userId = userId
+        
+        // save user id
+        ///////////////////////////////////////////////////////
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(userId, forKey: "userId")
+        userDefaults.setObject("1", forKey: "socialNetworkLoginStatus")
+        userDefaults.synchronize()
+        ///////////////////////////////////////////////////////
+        
+        self.navigationController?.pushViewController(userAnalysisController, animated: true)
+    }
     
 }

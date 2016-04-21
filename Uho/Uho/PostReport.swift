@@ -10,13 +10,10 @@ import Foundation
 
 class PostReport {
     
-    var perceivedAs:Array<CGFloat> = [ 0.7,0.3]
-    var negativePerceptionFromComments:CGFloat = 0.3
-    var negativePerceptionFromPhotos:CGFloat = 0.7
-    var negativePerceptionFromVideos:CGFloat = 0.45
-    
-    
-    
+    var perceivedAs:Array<CGFloat>!
+    var negativePerceptionFromComments:CGFloat?
+    var negativePerceptionFromPhotos:CGFloat?
+    var negativePerceptionFromVideos:CGFloat?
     /*
  
       "post_report" : {
@@ -50,13 +47,17 @@ class PostReport {
     var postAnalysis = PostAnalysisDataSource()
     var postcomments = PostComments()
     
-    
     func totalComponentsInPerceivedAsField() -> UInt{
-        return UInt(perceivedAs.count)
+        if(perceivedAs != nil){
+            return UInt(perceivedAs!.count)
+        }
+        else{
+            return 0
+        }
     }
     
     func valueOfComponentAsPerceivedAsField(index : Int ) -> CGFloat{
-        return perceivedAs[ index ]
+        return perceivedAs![ index ]
     }
     
 }

@@ -26,6 +26,8 @@ class PostAnalysisDataSource : NSObject, UITableViewDataSource{
     }
     
     @objc func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        
         let analysisContentKey = analysisKeys[section] 
         let analysisArray = analysis[analysisContentKey]
         

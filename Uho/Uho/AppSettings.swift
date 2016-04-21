@@ -13,9 +13,10 @@ class AppSettings {
     var monitoring = true
     var pushNotifications = true
     
-    var angerTolerance:Float = 0.5
-    var disgustTolerance:Float = 0.3
-    var sadnessTolerance:Float = 0.7
+    var angerTolerance:Float
+    var foulLanguage:Float
+    var politicalCorrectness:Float
+    var partying:Float
     
     
     
@@ -31,9 +32,10 @@ class AppSettings {
             monitoring = true
             pushNotifications = true
             
-            angerTolerance = 0.5
-            disgustTolerance = 0.3
-            sadnessTolerance = 0.7
+            angerTolerance = 0.0
+            foulLanguage = 0.0
+            politicalCorrectness = 0.0
+            partying = 0.0
             
             save()
         }
@@ -42,8 +44,9 @@ class AppSettings {
             monitoring = settingsDict!["monitoring"] as! Bool
             pushNotifications = settingsDict!["pushNotifications"] as! Bool
             angerTolerance = settingsDict!["angerTolerance"] as! Float
-            disgustTolerance = settingsDict!["disgustTolerance"] as! Float
-            sadnessTolerance = settingsDict!["sadnessTolerance"] as! Float
+            foulLanguage = settingsDict!["foulLanguage"] as! Float
+            politicalCorrectness = settingsDict!["politicalCorrectness"] as! Float
+            partying = settingsDict!["partying"] as! Float
             
         }
         
@@ -55,8 +58,9 @@ class AppSettings {
         settingsDict["monitoring"] = monitoring
         settingsDict["pushNotifications"] = pushNotifications
         settingsDict["angerTolerance"] = angerTolerance
-        settingsDict["disgustTolerance"] = disgustTolerance
-        settingsDict["sadnessTolerance"] = sadnessTolerance + 0.2
+        settingsDict["foulLanguage"] = foulLanguage
+        settingsDict["politicalCorrectness"] = politicalCorrectness
+        settingsDict["partying"] = partying
         
         let userDefaults = NSUserDefaults.standardUserDefaults()
 
