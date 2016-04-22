@@ -41,6 +41,14 @@ class SettingsViewController : UIViewController {
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 48.0/255.0, green: 53.0/255.0, blue: 126.0/255.0, alpha: 1.0)
         
         //self.toleranceLevelView.frame = CGRectMake(0, 0, self.toleranceLevelView.frame.size.width, 350)
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenHeight = screenSize.height
+        if (screenHeight == 667 || screenHeight == 736){
+            // iphone 6 and 6s}
+            self.toleranceLevelScrollView.scrollEnabled = false
+        }
+
+        
         
         refreshScreen()
     }
@@ -136,7 +144,26 @@ class SettingsViewController : UIViewController {
         //TODO: update functionality as per different login option introduce
         // Refresh facebook Token and update token on server
         let login = FBSDKLoginManager()
-        login.logInWithReadPermissions(["public_profile"], fromViewController: self) { (loginResult : FBSDKLoginManagerLoginResult!, error : NSError!) in
+        login.logInWithReadPermissions([ "email",
+            "user_likes",
+            "user_status",
+            "user_about_me",
+            "user_location",
+            "user_birthday",
+            "user_photos",
+            "user_videos",
+            "user_posts",
+            "user_friends",
+            "user_relationship_details",
+            "user_work_history",
+            "user_relationships",
+            "user_religion_politics",
+            "user_hometown",
+            "user_games_activity",
+            "user_tagged_places",
+            "user_education_history",
+            "user_website",
+"public_profile"], fromViewController: self) { (loginResult : FBSDKLoginManagerLoginResult!, error : NSError!) in
             
             if error != nil {
                 print(error)

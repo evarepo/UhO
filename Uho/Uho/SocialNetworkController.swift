@@ -56,7 +56,26 @@ class SocialNetworkController : UIViewController{
         }else{
             // Token is not available
             let login = FBSDKLoginManager()
-            login.logInWithReadPermissions(["public_profile"], fromViewController: self) { (loginResult : FBSDKLoginManagerLoginResult!, error : NSError!) in
+            login.logInWithReadPermissions([ "email",
+                "user_likes",
+                "user_status",
+                "user_about_me",
+                "user_location",
+                "user_birthday",
+                "user_photos",
+                "user_videos",
+                "user_posts",
+                "user_friends",
+                "user_relationship_details",
+                "user_work_history",
+                "user_relationships",
+                "user_religion_politics",
+                "user_hometown",
+                "user_games_activity",
+                "user_tagged_places",
+                "user_education_history",
+                "user_website",
+"public_profile"], fromViewController: self) { (loginResult : FBSDKLoginManagerLoginResult!, error : NSError!) in
                 
                 if error != nil {
                     print(error)
